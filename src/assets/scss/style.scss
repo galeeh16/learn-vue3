@@ -1,0 +1,188 @@
+/*!
+ * Bootstrap v5.1.0 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "colorVariables";
+
+$font-size-base: 0.96rem;
+
+$theme-colors: (
+	"primary": $primary,
+	"danger": $danger
+);
+
+// Create your own map
+$custom-colors: (
+	"pink": #d62099,
+	"gray-700": #444658
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$border-radius: 5px !default;
+
+$btn-padding-y: 0.5rem !default;
+$btn-font-weight: 500 !default;
+
+// Input form-control
+$input-btn-padding-y: 0.5rem !default;
+$input-btn-padding-x: 0.75rem !default;
+$input-btn-font-size: 15px !default;
+$input-border-color: $gray-400 !default;
+$input-placeholder-color: $gray-500 !default;
+
+@import "bootstrapOnlyUse";
+
+html,
+body {
+	// color: #373b49;
+	font-family: "Poppins", sans-serif;
+	color: $gray-800;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+	color: #242b38;
+}
+
+.f-18 {
+	font-size: 18px;
+}
+.f-20 {
+	font-size: 20px;
+}
+.f-22 {
+	font-size: 22px;
+}
+.f-24 {
+	font-size: 24px;
+}
+.f-26 {
+	font-size: 26px;
+}
+.f-28 {
+	font-size: 28px;
+}
+
+.pt-100 {
+	padding-top: 100px;
+}
+.pb-100 {
+	padding-bottom: 100px;
+}
+.mt-100 {
+	margin-top: 100px;
+}
+.mb-100 {
+	margin-bottom: 100px;
+}
+
+@media (min-width: 1500px) {
+	.container-xxl,
+	.container-xl,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container {
+		max-width: 1400px;
+	}
+}
+.wrapper {
+	margin-top: 79px;
+}
+
+.brand {
+	font-weight: 500;
+	font-size: 38px;
+	font-family: "Pacifico", cursive, sans-serif;
+	text-decoration: none;
+}
+
+.navbar {
+	height: 80px;
+	border-bottom: 1px solid #f2f5f4;
+
+	.navbar-brand {
+		font-weight: 500;
+		font-size: 38px;
+		font-family: "Pacifico", cursive, sans-serif;
+	}
+
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				padding-left: 1rem;
+				padding-right: 1rem;
+				color: $gray-800;
+				font-weight: 500;
+			}
+			.nav-link:hover {
+				color: $primaryHover;
+			}
+			.nav-link.router-link-exact-active {
+				color: $primary;
+			}
+		}
+	}
+}
+
+// BUTTON
+.btn-primary {
+	color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-outline-primary:hover {
+	color: #fff;
+	background-color: $primaryHover;
+}
+
+/** FONT WEIGHT */
+.fw-500 {
+	font-weight: 500 !important;
+}
+.fw-600 {
+	font-weight: 600 !important;
+}
+
+.hero {
+	// height: 500px;
+	background-color: #f6fcfb;
+	overflow: hidden;
+
+	.container {
+		.img-banner img {
+			// transition: transform 0.3s ease-in-out;
+			// transform: skewY(18deg);
+			// transform: rotateY(20deg);
+			filter: drop-shadow(5px 15px 15px #4948483a);
+			-webkit-filter: drop-shadow(5px 15px 15px #4948483a);
+		}
+		// .img-banner:hover {
+		// transform: skewY(0deg);
+		// }
+	}
+}
+
+@media (min-width: 1400px) {
+	h1,
+	.h1 {
+		font-size: 4rem;
+	}
+	h2,
+	.h2 {
+		font-size: 3rem;
+	}
+}
